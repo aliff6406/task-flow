@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  /* @appply is a tailwind directive */
+  /* below are default styling for font size and colour, and bg colour */
+  @apply text-sm;
+  @apply bg-gray-500;
+  @apply text-gray-900;
+}
