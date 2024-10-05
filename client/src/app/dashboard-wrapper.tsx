@@ -1,7 +1,10 @@
+"use client";
+
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
+import StoreProvider from "./redux";
 
-const DashboardWrapper = ({ children }: { children: React.ReactNode }) => {
+const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex min-h-screen w-full bg-gray-50 text-gray-900">
       {/* sidebar */}
@@ -15,4 +18,14 @@ const DashboardWrapper = ({ children }: { children: React.ReactNode }) => {
     </div>
   );
 };
+
+const DashboardWrapper = ({ children }: { children: React.ReactNode }) => {
+  return (
+    // Connect with redux
+    <StoreProvider>
+      <DashboardLayout>{children}</DashboardLayout>
+    </StoreProvider>
+  );
+};
+
 export default DashboardWrapper;
