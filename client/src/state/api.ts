@@ -55,8 +55,8 @@ export interface Task {
   authorUserId?: number;
   assignedUserId?: number;
 
-  author?: UserActivation;
-  assignee?: UserActivation;
+  author?: User;
+  assignee?: User;
   comments?: Comment[];
   attachments?: Attachment[];
 }
